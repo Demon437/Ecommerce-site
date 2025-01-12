@@ -1,0 +1,62 @@
+.login-container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+.login-image {
+  flex: 2; /* Increase the width of the left side */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.login-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Maintain aspect ratio and fill container */
+}
+
+.login-form {
+  flex: 1; /* Decrease the width of the right side */
+  background-color: #ffffff;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 350px; /* Limit the maximum width of the form */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.custom-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.custom-input-wrapper label {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.custom-input-wrapper input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
