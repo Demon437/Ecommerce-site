@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .container {
@@ -11,6 +12,19 @@ body {
 
 @media (max-width: 768px) {
   .container {
+    max-width: 100%;
     padding: 20px;
+  }
+
+  body {
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  .card {
+    width: 100%; /* Make cards full width on mobile */
+  }
+
+  .btn {
+    width: 100%; /* Buttons full width on mobile */
   }
 }
