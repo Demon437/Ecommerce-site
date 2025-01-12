@@ -42,5 +42,14 @@
   },
   "devDependencies": {
     "ajv": "^7.2.4"
-  }
+  },
+
+  "engines": {
+  "node": "16.x",
+  "npm": "7.x"
 }
+
+}
+
+
+
