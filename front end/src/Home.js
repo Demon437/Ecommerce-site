@@ -12,6 +12,7 @@ import {
 import Footer from './Footer';
 import { useNavigate } from 'react-router-dom';
 
+
 export default function Home() {
 
   const navigate = useNavigate();
@@ -41,6 +42,11 @@ export default function Home() {
       minHeight: "100vh",
       padding: "20px",
     }}>
+
+
+
+
+
       <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
         {
           apidata.map((i) =>
@@ -64,11 +70,32 @@ export default function Home() {
                     <MDBCardTitle>₹{i.pprice}</MDBCardTitle>
                     <MDBCardText>{i.pdesc}</MDBCardText>
                   </div>
-                  <div>
-                    <MDBBtn color="dark" onClick={() => singleItem(i.pid)} style={{ width: "200px", marginBottom: "20px" }}>Description</MDBBtn>
-                    &nbsp;&nbsp;
-                    <MDBBtn color="primary" onClick={() => addCart(i.pid, i.pname, i.pprice, i.pimage)} style={{ width: "200px" }} >Add To Cart</MDBBtn>
+                  <div className="d-flex justify-content-between mb-3" style={{ gap: '10px', flexWrap: 'wrap' }}>
+                    <MDBBtn
+                      color="dark"
+                      onClick={() => singleItem(i.pid)}
+                      style={{ flex: 1, minWidth: '150px' }}
+                    >
+                      Description
+                    </MDBBtn>
+
+                    <MDBBtn
+                      color="primary"
+                      onClick={() => addCart(i.pid, i.pname, i.pprice, i.pimage)}
+                      style={{ flex: 1, minWidth: '150px' }}
+                    >
+                      Add To Cart
+                    </MDBBtn>
                   </div>
+
+                  <MDBBtn
+                    color="warning"
+                    onClick={() => navigate("/payment", { state: { pid: i.pid, pname: i.pname, pprice: i.pprice } })}
+                    style={{ width: "100%", marginBottom: "10px" }}
+                  >
+                    Buy Now
+                  </MDBBtn>
+
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>

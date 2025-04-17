@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Spinner from "react-bootstrap/Spinner";
+import './Register.css'; // When both files are in the same folder
 
 function Register() {
   const [name, setName] = useState("");
@@ -53,14 +54,19 @@ function Register() {
   return (
     <div
       style={{
-        background: "linear-gradient(to right, #ff7e5f, #feb47b)",
-        minHeight: "100vh",
+        backgroundImage:
+          'url("https://images.unsplash.com/photo-1581091012184-d4c2d76f72f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        height: "100vh", // Changed minHeight to height
+        width: "100vw",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "20px",
       }}
     >
+
       <Container
         style={{
           background: "#fff",
